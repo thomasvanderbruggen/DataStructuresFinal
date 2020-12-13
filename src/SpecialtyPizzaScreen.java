@@ -366,7 +366,6 @@ public class SpecialtyPizzaScreen extends JFrame {
 					// re-sets the price and the order text and repaints the original frame
 					SpecialtyPizzas temp = new SpecialtyPizzas((SpecialtyPizzas.Specialties)comboBox.getSelectedItem(), toppings, sauce, size, crust); 
 					order.add(temp);
-					order.sortOrder();
 					price.setText("$" + df.format(order.getPrice()));
 					orderToUser.setText(order.printOrder());
 					ogFrame.revalidate();

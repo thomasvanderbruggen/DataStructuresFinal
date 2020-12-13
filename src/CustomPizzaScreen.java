@@ -20,23 +20,6 @@ import javax.swing.border.EmptyBorder;
 
 import net.miginfocom.swing.MigLayout;
 
-/**************************************************************
-* Name        : 
-* Author      : 
-* Created     :
-* Course      : CIS 152 Data Structures
-* Version     : 1.0
-* OS          : Windows 10
-* Copyright   : This is my own original work based on
-*               specifications issued by our instructor
-* Description : This program overall description here
-*               Input: 
-*               Output:
-* Academic Honesty: I attest that this is my original work.
-* I have not used unauthorized source code, either modified or 
-* unmodified. I have not given other fellow student(s) access to
-* my program.         
-***************************************************************/
 
 /**
  * @author Tom
@@ -237,7 +220,6 @@ public class CustomPizzaScreen extends JFrame {
 					// re-sets the price and the order text and repaints the original frame
 					Pizza temp = new Pizza(toppings, sauce, size, crust); 
 					order.add(temp);
-					order.sortOrder();
 					price.setText("$" + df.format(order.getPrice()));
 					orderToUser.setText(order.printOrder());
 					ogFrame.revalidate();

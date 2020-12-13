@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 /**
@@ -14,6 +15,7 @@ public class Pizza {
 	protected String sauce; 
 	protected Sizes size; 
 	protected Crusts crust;
+	private DecimalFormat df = new DecimalFormat("0.00");
 	/*
 	 * All possible sizes of pizza
 	 */
@@ -131,7 +133,7 @@ public class Pizza {
 		for (String topping: toppings) { // for each topping in ArrayList toppings
 			pizzaToppings += topping + "\n\t";
 		}
-		return pizzaSize + " " + crustType + "\t\t\t\t" + getPrice() + "\n" + "\t" + sauce + "\n" + pizzaToppings;
+		return pizzaSize + " " + crustType + "\t\t\t\t" + df.format(getPrice()) + "\n" + "\t" + sauce + "\n" + pizzaToppings;
 	}
 	
 	

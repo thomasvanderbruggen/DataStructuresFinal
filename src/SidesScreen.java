@@ -31,7 +31,7 @@ public class SidesScreen extends JFrame {
 	public SidesScreen(Order order, JFrame ogFrame, JTextPane price, TextArea orderToUser) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 427, 344);
+		setBounds(100, 100, 532, 343);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -115,7 +115,7 @@ public class SidesScreen extends JFrame {
 				if (jalaPopChk.isSelected()) {sides.add("Jala Poppers"); }
 				if (mozzStickChk.isSelected()) {sides.add("Mozzarella Sticks");}
 				if (friedRavChk.isSelected()) {sides.add("Fried Ravioli"); } 
-				if (tradCupChk.isSelected()) {sides.add("Cup of Traditional"); } 
+				if (tradCupChk.isSelected()) {sides.add("Cup of Red"); } 
 				if (ranchCupChk.isSelected()) {sides.add("Cup of Ranch"); } 
 				if (mildCupChk.isSelected()) {sides.add("Cup of Mild"); }
 				if (buffCupChk.isSelected()) {sides.add("Cup of Buffalo");}
@@ -125,7 +125,6 @@ public class SidesScreen extends JFrame {
 				}
 				// re-sets the price and the order text and repaints the original frame
 				price.setText(df.format(order.getPrice()));
-				order.sortOrder(); 
 				orderToUser.setText(order.printOrder());
 				ogFrame.revalidate(); 
 				ogFrame.repaint();

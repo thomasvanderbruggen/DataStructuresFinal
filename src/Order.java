@@ -88,4 +88,8 @@ public class Order {
 		}
 		return price;
 	}
+	public void clear() {
+		orderItems = new ArrayList<Object>();
+		orderItemsPrices = new ArrayList<Double>();
+	}
 }

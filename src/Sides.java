@@ -40,7 +40,7 @@ public class Sides {
 		sidePrices.put("Jala Poppers", 4.99);
 		sidePrices.put("Mozzarella Sticks", 4.99);
 		sidePrices.put("Fried Ravioli", 6.99);
-		sidePrices.put("Cup of Traditional", .50); 
+		sidePrices.put("Cup of Red", .50); 
 		sidePrices.put("Cup of Ranch", .50); 
 		sidePrices.put("Cup of Mild", .50); 
 		sidePrices.put("Cup of Buffalo", .50); 

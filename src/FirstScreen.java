@@ -16,24 +16,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 
-/**************************************************************
-* Name        : 
-* Author      : 
-* Created     :
-* Course      : CIS 152 Data Structures
-* Version     : 1.0
-* OS          : Windows 10
-* Copyright   : This is my own original work based on
-*               specifications issued by our instructor
-* Description : This program overall description here
-*               Input: 
-*               Output:
-* Academic Honesty: I attest that this is my original work.
-* I have not used unauthorized source code, either modified or 
-* unmodified. I have not given other fellow student(s) access to
-* my program.         
-***************************************************************/
-
 /**
  * @author Tom
  *
@@ -89,7 +71,7 @@ public class FirstScreen {
 		firstScreen.getContentPane().add(priceLbl);
 		
 		JButton placeOrderBtn = new JButton("Place Order");
-		placeOrderBtn.setBounds(524, 350, 89, 23);
+		placeOrderBtn.setBounds(495, 349, 118, 23);
 		firstScreen.getContentPane().add(placeOrderBtn);
 		
 		JTextPane price = new JTextPane();
@@ -111,8 +93,12 @@ public class FirstScreen {
 		}); 
 		placeOrderBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				order.sortOrder();
 				PlacedOrderScreen window = new PlacedOrderScreen(order); 
 				window.setVisible(true);
+				order.clear();
+				price.setText("$0.00");
+				orderDisplay.setText("");
 			}
 			
 		}); 
